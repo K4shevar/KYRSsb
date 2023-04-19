@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Create user</title>
+    <link rel="stylesheet"  th:href="@{/styles/all/style.css}">
+
 </head>
 <body>
-<form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
-    <label for="firstName">First name</label>
-    <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">
-    <label for="lastName">Last name</label>
-    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
-    <input type="submit" value="Create User">
-</form>
+<header>
+    <div class="logo">
+        <img th:src="@{/images/logo.png}" alt="">
+        <h1></h1>
+    </div>
+
+</header>
+<div style="width:100%;height:0px;border:0px; background-color: #aaf380"></div>
+
+<section>
+    <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
+        <label for="name">First name</label>
+        <input type="text" th:field="*{name}" id="name" placeholder="First Name">
+        <br/>
+        <label for="surname">surname</label>
+        <input type="text" th:field="*{surname}" id="surname" placeholder="Last Name">
+        <br/>
+        <label for="name">Patronymic</label>
+        <input type="text" th:field="*{patronymic}" id="patronymic" placeholder="patronymic">
+        <br/>
+        <label for="name">Number</label>
+        <input type="text" th:field="*{number}" id="number" placeholder="Num">
+        <br/>
+        <input type="submit" value="Create User">
+    </form></section>
+
 </body>
 </html>

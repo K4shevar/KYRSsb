@@ -1,0 +1,114 @@
+/* Стили для шапки */
+header {
+    background-color:  #aaf380;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 0px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    font-size: 18px;
+}
+
+
+body {
+      font-family:  "Times New Roman",
+          Times, serif;
+      color: rgb(14, 7, 41);
+      background-color: #eef4f4;
+      margin: 0; /* Убираем отступы в браузере */
+}
+.toptext{
+    margin-left: 3em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 45px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    color: #686461;
+}
+
+section {
+      position: absolute;
+      background: #a9dfb2;
+      color: #32302e;
+      border-radius: 1em;
+      padding: 1em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-45%, -45%);}
+
+
+.input-speshal {
+      background: white;
+      color: #32302e;
+      border-radius: 1em;
+      padding: 0.5em;
+
+      color: black;
+      font-size: 10pt;
+      font-weight: 700;}
+
+table {
+      margin: auto;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+      border-collapse: collapse;
+      color: #686461;
+      width: 90%;
+      }
+
+      .table th {
+            border-bottom: 3px solid #4b7960;
+            padding: 10px;
+            text-align: left;
+
+            }
+
+      .table  td {
+            padding: 10px;
+            }
+
+      .table tr:nth-child(odd) {
+            background: white;
+            }
+
+      .table tr:nth-child(even) {
+            background: #abdfa9;
+            }
+
+a2 {
+    margin-left: 50%;
+    background: #abdfa9;
+    color: #32302e;
+    border-radius: 1em;
+    border-color: white;
+    padding: 0.5em;
+
+    color: black;
+    font-size: 10pt;
+    font-weight: 700;
+    color: black;
+
+}

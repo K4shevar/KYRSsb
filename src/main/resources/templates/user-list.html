@@ -1,34 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<link  rel="stylesheet" />
+
 <head>
     <meta charset="UTF-8">
-    <title>Users</title>
+    <title>Пользователи</title>
+
+    <link rel="stylesheet"  th:href="@{/styles/all/style.css}">
+
 </head>
 <body>
+<header>
+    <div class="logo">
+        <img th:src="@{/images/logo.png}" alt="">
+        <h1></h1>
+    </div>
+
+</header>
+<div style="width:100%;height:0px;border:0px; background-color: #aaf380"></div>
+
 <div th:switch="${users}">
     <h2 th:case="null">No users found!</h2>
     <div th:case="*">
-        <h2>Users</h2>
+        <h2>Пользователи</h2>
         <table>
             <thead>
             <tr>
                 <th>Id</th>
-                <th>First name</th>
-                <th>Last name</th>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Отчество</th>
+                <th></th><th></th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="user : ${users}">
                 <td th:text="${user.id}"></td>
-                <td th:text="${user.firstName}"></td>
-                <td th:text="${user.lastName}"></td>
-                <td><a th:href="@{user-update/{id}(id=${user.id})}">Edit</a></td>
-                <td><a th:href="@{user-delete/{id}(id=${user.id})}">Delete</a></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.patronymic}"></td>
+                <td th:text="${user.number}"></td>
+                <td><a th:href="@{user-update/{id}(id=${user.id})}">Изменить</a></td>
+                <td><a th:href="@{user-delete/{id}(id=${user.id})}">Удалить</a></td>
             </tr>
             </tbody>
         </table>
     </div>
-    <p><a href="/user-create">Create user</a></p>
+
+    <p><a2 href="/user-create">Добавить пользователя</a2></p>
 </div>
 </body>
 </html>
